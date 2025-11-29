@@ -149,6 +149,7 @@ body {
     font-weight: 600;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     padding-left: 15px; /* Empurra o texto para a direita */
+    transition: all 0.3s;
 }
 
 .social-login {
