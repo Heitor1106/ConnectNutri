@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <title>Agendamento</title>
+    <link rel="icon" href="./img/logo.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="./img/logo.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="./img/logo.png">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body class="agendamento-body">
+    <header class="main-header">
+        <div class="header-left">
+            <a href="#">
+                <img src="./img/Logobonita.png" alt="Logo ConnectNutri" class="logoprincipal">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="calendar"></div>
+        <div class="time-slots-container" style="display: none;">
+            <h2>Horários Disponíveis</h2>
+            <div id="time-slots">
+            </div>
+        </div>
+        <div class="appointment-details">
+            <h2>Detalhes do Agendamento</h2>
+            
+            <div class="form-group">
+                <label for="appointment-type">Tipo de Atendimento:</label>
+                <select id="appointment-type" name="appointment-type" class="form-control">
+                    <option value="" disabled selected>Selecione o tipo</option>
+                    <option value="crianca">Nutrição para Criança</option>
+                    <option value="adolescente">Nutrição para Adolescente</option>
+                    <option value="adulto">Nutrição para Adulto</option>
+                    <option value="gestante">Nutrição para Gestante</option>
+                    <option value="idoso">Nutrição para Idoso</option>
+                    <option value="nutricao-esportiva">Nutrição Esportiva</option>
+                </select>
+            </div>
+
+            <div class="selected-date-info">
+                Data Selecionada: <span id="selected-date">Nenhuma</span>
+            </div>
+    
+            <a href="telainicio.html" class="cancel-button">
+                <img src="./img/CancelarAgendamento.png" alt="Ícone de cancelar">
+                <span>Cancelar Agendamento</span>
+            </a>
+            <button class="confirm-button" onclick="location.href='telapréfinal.html'">Confirmar Agendamento</button>
+        </div>
+        </div>
+    </main> 
+    <script src="agendamento.js"></script>
+</body>
+</html>

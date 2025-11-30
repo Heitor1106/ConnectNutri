@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body.agendamento-body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('./img/fundo.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px; /* Aumentei o espaço no topo para descer o container */
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: transparent;
+    z-index: 1001;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.logoprincipal {
+    width: 145px; 
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Alinha itens no início (esquerda) */
+    align-items: flex-start;    /* Alinha itens no topo */
+    gap: 20px; 
+    width: 97vw;
+    height: 86vh;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgba(255, 255, 255, .5);
+    border-radius: 40px;
+    color:#000000;
+    padding: 30px 60px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    backdrop-filter: blur(20px);
+    position: relative; /* Adicionado para posicionar o botão relativo a este container */
+    
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row; /* Coloca imagem e texto lado a lado */
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.menu-item span {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.profile-pic {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+/* Define o tamanho do container do calendário */
+#calendar {
+    width: 550px;  /* Largura ajustada para ser menor */
+    height: 650px; /* Altura para dar a proporção de quadro */
+    max-width: 100%; /* Garante que o calendário se ajuste em telas menores */
+}
+
+.fc .fc-button-primary {
+    background-color: #0d47a1; 
+    border-color: #0d47a1;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #1565c0;
+    border-color: #1565c0;
+}
+
+.fc .fc-day-today {
+    background-color: rgba(229, 239, 245, 0.7);
+}
+
+.fc .fc-toolbar-title {
+    text-transform: uppercase;
+}
+
+.cancel-button {
+    display: flex;
+    align-items: center;
+    background-color: #d9534f;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    position: fixed; /* Fixa o botão na tela */
+    top: 35px;       /* Distância do topo */
+    right: 60px;     /* Distância da direita */
+}
+
+.cancel-button:hover {
+    background-color: #c9302c;
+}
+
+.cancel-button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* Estilos para a seção de detalhes do agendamento */
+.appointment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px; /* Largura da nova seção */
+    padding: 20px;
+    border-left: 2px solid #f0f0f0; /* Linha separadora */
+    margin-left: 20px;
+}
+
+.appointment-details h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 2px solid #0d47a1;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+.selected-date-info {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+    background-color: #e9eff5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.confirm-button {
+    background-color: #28a745; /* Verde para confirmação */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: auto; /* Empurra o botão para o final do container */
+}
+
+.confirm-button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para o dia selecionado no calendário */
+.selected-day {
+    background-color: #0d47a1 !important; /* Cor principal do tema */
+}
+
+/* Garante que o número do dia fique branco e legível */
+.selected-day .fc-daygrid-day-number {
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilos para a seção de horários */
+.time-slots-container {
+    display: flex;
+    flex-direction: column;
+    width: 220px; /* Largura da seção de horários */
+    padding: 20px;
+    border-left: 2px solid #f0f0f0;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+.time-slots-container h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 2px solid #0d47a1;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#time-slots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de horários */
+    gap: 10px;
+}
+
+.time-slot {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+}
+
+.time-slot:hover {
+    background-color: #e0e0e0;
+}
+
+.time-slot.selected {
+    background-color: #28a745; /* Verde para indicar seleção */
+    color: white;
+    border-color: #218838;
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adicionado para centralizar verticalmente */
+    min-height: 100vh;
+    background: url('./img/fundo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Garante que o conteúdo comece na esquerda */
+    align-items: center;
+    padding: 5px 40px;
+    background-color: transparent;
+    z-index: 1001;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logoprincipal {
+    width: 145px; 
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;
+    gap: 20px;
+    width: 97vw;
+    height: 86vh;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgba(255, 255, 255, .5);
+    border-radius: 40px;
+    color:#000000;
+    padding: 20px 30px; /* Ajustado o padding */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    backdrop-filter: blur(20px);
+    margin-top: 80px;
+}
+
+.confirmation-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Adiciona espaço abaixo das imagens */
+}
+
+.logo-confirmacao {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.img-confirmado {
+    width: 80px; 
+}
+
+.confirmation-images p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333; 
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.option-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 25%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #cccccc;
+    border-radius: 15px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.option-box:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+.option-box img {
+    width: 30px;
+    height: 30px;
+}
